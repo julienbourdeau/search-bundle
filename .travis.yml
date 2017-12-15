@@ -1,0 +1,17 @@
+ language: php
+
+php:
+    - 5.6
+    - 7.0
+    - 7.1
+    - 7.2
+
+env:
+  global:
+      - ALGOLIA_APP_ID=K7MLRQH1JG
+      - ALGOLIA_API_KEY=85f7bcd3ed5bd454dc670c48eb0aadec
+      # This API keys only works on travis
+      # has limited ACLs and other various restrictions
+
+script:
+    - php vendor/bin/phpunit -v
